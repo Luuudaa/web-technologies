@@ -1,0 +1,74 @@
+table {
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid black;
+  padding: 0;
+}
+
+.turquoise {
+  background-color: #6affeb;
+}
+
+.bodily {
+  background-color: #ecffbd;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.green {
+  background-color: #00b10c;
+}
+
+.blue {
+  background-color: #1d00b1;
+}
+
+.yellow {
+  background-color: #ffff00;
+}
+
+td{
+  height: 50px;
+  width: 50px;
+  border: 2px solid;
+}
+
+.double-horizontal{
+  height: 50px;
+  width: 100px;
+}
+
+.double-vertical{
+  height: 100px;
+  width: 50px;
+}
+
+.triple-horizontal{
+  height: 50px;
+  width: 150px;
+}
+
+.triple-vertical{
+  height: 150px;
+  width: 50px;
+}
+
+.table-blue{
+  height: 75px;
+  width: 100px;
+  background-color: #074481;
+}
+
+.half-black{
+  height: 25px;
+  width: 100px;
+  background-color: #000000;
+}
+
+.half-white{
+  height: 25px;
+  width: 200px;
+}

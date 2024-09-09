@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" href="questionnaire.css">
+    <title>Анкета студента</title>
+    
+</head>
+<body>
+    <h1>Анкета студента</h1>
+    
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Особисті дані</legend>
+            <label for="full_name">Повне ім'я:</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Введіть ваше ім'я" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+            <label for="phone">Мобільний телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380673085446">
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введіть пароль" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+
+            <label for="dob">Дата народження:</label>
+            <input type="date" id="dob" name="dob" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Гендер</legend>
+            <label><input type="radio" name="gender" value="male"> Чоловік</label>
+            <label><input type="radio" name="gender" value="female"> Жінка</label>
+            <label><input type="radio" name="gender" value="other" checked> Інший</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Уподобання</legend>
+            <label><input type="checkbox" name="preferences" value="sports"> Спорт</label>
+            <label><input type="checkbox" name="preferences" value="music"> Музика</label>
+            <label><input type="checkbox" name="preferences" value="movies"> Кіно</label>
+            <label><input type="checkbox" name="preferences" value="travel"> Подорожі</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Країна</legend>
+            <label for="country">Оберіть країну:</label>
+            <select id="country" name="country">
+                <option value="ukraine">Україна</option>
+                <option value="usa">США</option>
+                <option value="canada" selected>Канада</option>
+                <option value="germany">Німеччина</option>
+                <option value="france">Франція</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Інтереси</legend>
+            <label for="interests">Оберіть ваші інтереси (можливий мультивибір):</label>
+            <select id="interests" name="interests" multiple>
+                <option value="technology">Технології</option>
+                <option value="art">Мистецтво</option>
+                <option value="science">Наука</option>
+                <option value="literature">Література</option>
+                <option value="nature">Природа</option>
+                <option value="history">Історія</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Мова</legend>
+            <label for="language">Оберіть вашу мову:</label>
+            <select id="language" name="language">
+                <optgroup label="Європейські мови">
+                    <option value="english">Англійська</option>
+                    <option value="french">Французька</option>
+                    <option value="german">Німецька</option>
+                </optgroup>
+                <optgroup label="Азіатські мови">
+                    <option value="chinese">Китайська</option>
+                    <option value="japanese">Японська</option>
+                    <option value="korean">Корейська</option>
+                </optgroup>
+                <optgroup label="Слов'янські мови">
+                    <option value="ukrainian">Українська</option>
+                    <option value="polish">Польська</option>
+                </optgroup>
+                <optgroup label="Інші мови">
+                    <option value="arabic">Арабська</option>
+                    <option value="spanish">Іспанська</option>
+                    <option value="portuguese">Португальська</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Улюблена мова програмування</legend>
+            <label for="fav_language">Оберіть улюблену мову програмування:</label>
+            <input list="languages" id="fav_language" name="fav_language" placeholder="Почніть вводити...">
+            <datalist id="languages">
+                <option value="Python">
+                <option value="JavaScript">
+                <option value="Java">
+                <option value="C++">
+                <option value="Ruby">
+                <option value="PHP">
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>Завантаження файлів</legend>
+            <label for="file_upload">Завантажте ваші аудіо файли:</label>
+            <input type="file" id="file_upload" name="audio_files" accept="audio/*" multiple>
+        </fieldset>
+
+        <fieldset>
+            <legend>Дії</legend>
+            <button type="submit">Відправити</button>
+            <button type="reset">Очистити</button>
+        </fieldset>
+    </form>
+</body>
+</html>
